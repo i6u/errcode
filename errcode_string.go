@@ -4,6 +4,15 @@ package errcode
 
 import "strconv"
 
+func _() {
+	// An "invalid array index" compiler error signifies that the constant values have changed.
+	// Re-run the stringer command to generate them again.
+	var x [1]struct{}
+	_ = x[ERR_CODE_OK-0]
+	_ = x[ERR_CODE_INVALID_PARAMS-1]
+	_ = x[ERR_CODE_TIMEOUT-2]
+}
+
 const _ErrCode_name = "OK无效参数超时"
 
 var _ErrCode_index = [...]uint8{0, 2, 14, 20}
